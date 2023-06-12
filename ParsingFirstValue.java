@@ -54,8 +54,17 @@ public class ParsingFirstValue {
             String dob = scanner.nextLine();
             age = CurrentYear - Integer.parseInt(dob);
              */
-            age = checkData(CurrentYear, scanner.nextLine());
-            validDOB = age<0?false:true;
+
+
+
+            // trying "try & catch" block
+
+            try {
+                age = checkData(CurrentYear, scanner.nextLine());
+                validDOB = age<0?false:true;
+            } catch (NumberFormatException useOfChar) {
+                System.out.println("Please, no characters. Only numbers. ");
+            }
             
         } while (!validDOB);
 
