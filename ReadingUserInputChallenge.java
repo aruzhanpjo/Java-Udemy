@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class ReadingUserInputChallenge {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        try {
         int sum = 0;
         int counter = 1;
 
@@ -18,5 +19,8 @@ public class ReadingUserInputChallenge {
             }
         }
         System.out.println("The sum of the numbers is " + sum);
+    } finally {
+        scanner.close();
+    }
     }
 }
