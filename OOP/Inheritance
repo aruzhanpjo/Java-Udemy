@@ -1,0 +1,17 @@
+// Inheritance concept & how to use protected access modifier
+
+public class Fruit {
+    protected String theType = "berry";
+    public void color() {
+        System.out.println("The color is red");
+    }
+}
+
+class Strawberry extends Fruit {
+    private String theFruit = "Strawberry";
+    public static void main(String[] args) {
+        Strawberry myFruit = new Strawberry();
+        myFruit.color();
+        System.out.println(myFruit.theFruit +" is a " + myFruit.theType);
+    }
+}
